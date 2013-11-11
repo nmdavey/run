@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>Miles:</strong>
+  <%= @post.miles %>
+</p>
+
+<p>
+  <strong>Run Date:</strong>
+  <%= @post.run_date.strftime("%d %B %Y") %>
+</p>
+
+<% if @post.user == current_user %>
+	<%= link_to 'Edit', edit_post_path(@post) %>
+<% end %>
+<%= link_to 'Back', posts_path %>

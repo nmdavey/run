@@ -1,0 +1,27 @@
+<p>index => List of Users</p>
+
+<div class="panel panel-default">
+	<table class="table table-condensed table-striped">
+  	<thead>
+	    <tr>
+	      <th>User email</th>
+	      <th>Name</th>
+	      <th>ID</th>
+	      <th># of Runs</th>
+	    </tr>
+	  </thead>
+  	<tbody>
+			<% @users.each do |x| %>
+				<tr>
+					<td><%= x.email %></td>
+					<td><%= x.name %></td>
+					<td><%= x.id %></td>
+					<td></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+

@@ -1,0 +1,53 @@
+profile
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+
+<p>
+  <strong>Number of Runs:</strong>
+  <%= @user.posts.count %>
+</p>
+<h3><strong>My runs</strong></h3>
+<div class="panel panel-default">
+	<table class="table table-condensed table-striped">
+  	<thead>
+	    <tr>
+	      <th>Run Date</th>
+	      <th>Week Day</th>
+	      <th>Days ago</th>
+	      <th>Miles</th>
+	      <th>Run Description</th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+  		<% @user.posts.each do |run| %>
+  		<tr>
+		  	<td><%= run.run_date.strftime("%B %d, %Y") %></td>
+		  	<td><%= run.run_date.strftime("%A") %></td>
+		  	<td><%= time_ago_in_words(run.run_date) %></td>
+		  	<td><%= run.miles %></td>
+		  	<td><%= run.description %></td>
+  		</tr>
+  		<% end %>
+  	</tbody>
+  </table>
+</div>
+
+
+<p><strong>Some temporary filler</strong></p>
+<p><strong>User posts inspect</strong><%= @user.posts.inspect %></p>
+<p><strong>User first posts inspect</strong><%= @user.posts.first.inspect %></p>
+<p><%= @user.posts.first.miles %></p>
+<p><%= @user.posts.first %></p>
+<p><strong>ID:</strong><%= @user.id %></p>
+<p><strong>User inspect</strong><%= @user.inspect %></p>
+
+

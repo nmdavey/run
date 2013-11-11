@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-datepicker-rails.git
+  revision: 8400591e149d0e9f50957c76fe7f51a73972b887
+  specs:
+    bootstrap-datepicker-rails (1.1.1.9)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
   branch: 3
@@ -156,6 +163,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (~> 1.20.0)
+  bootstrap-datepicker-rails!
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
   devise (~> 3.1.1)

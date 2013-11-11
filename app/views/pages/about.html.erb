@@ -1,2 +1,14 @@
 <h1>Pages#about</h1>
 <p>Find me in app/views/pages/about.html.erb</p>
+
+
+
+<span>
+<%= time_zone_select(:person, :time_zone) %>
+</span>
+
+<span>
+<%= select_date Date.today, prefix: :start_date %>
+</span>
+<%= telephone_field(:user, :phone) %>
+<%= color_field(:user, :favorite_color) %>
